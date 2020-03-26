@@ -1,0 +1,10 @@
+note(){
+    currentDate=$(date "+%m-%d-%Y")
+    if [ ! -d "~/Notes" ]; then
+        mkdir ~/Notes
+    fi
+
+    if [ ! -f "~/Notes/${currentDate}.txt" ]; then
+        vim ~/Notes/$currentDate.txt
+    fi
+}
