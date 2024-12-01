@@ -1,0 +1,22 @@
+cleanup(){
+    # Cleans up Mac desktop by moving any file name containing the word "Screenshot" to ~/Desktop/Screenshots directory.
+    searchKeyword="Screenshot"
+    sourceDir=~/Desktop
+    destinationDir=~/Desktop/Screenshots
+
+    # Create the ~/Desktop/Screenshots directory if it doesn't already exist.
+    if [ ! -d ~/Desktop/Screenshots ]; then
+        mkdir ~/Screenshots
+    fi
+
+    # Iterate through files in source directory
+    for file in "$sourceDir"/*
+    do
+      # Check if the item is a file and if it contains our search keyword.
+      if [ -f "$file" ] && [[ "$file" == *"$searchKeyword"* ]]; then
+
+      # Move the file to destination directory
+      mv "$file" "$destinationDir"
+    fi
+    done
+}

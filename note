@@ -1,4 +1,5 @@
 note(){
+    # Opens ~/Notes/[today's date in mm-dd-YYYY format].txt file in vim for note taking.
     currentDate=$(date "+%m-%d-%Y")
     if [ ! -d ~/Notes ]; then
         mkdir ~/Notes
