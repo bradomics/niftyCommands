@@ -1,2 +1,2 @@
 # niftyCommands
-A collection of nifty terminal commands
+A collection of nifty terminal commands.
